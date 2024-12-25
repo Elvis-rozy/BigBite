@@ -1,0 +1,78 @@
+.productShowcase {
+  position: relative;
+  background: url("../images/snacksBg.png");
+  background-position: start;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .snack {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px 15px 30px 30px;
+    overflow: hidden;
+    transition: .3s;
+    padding: 10px;
+
+    &:hover {
+      box-shadow: 5px 7px 20px 0px #0000004a;
+    }
+    
+    &:hover .snackImage {
+      transform: scale(1.2);
+    }
+
+    .name{
+      margin: 30px 0 5px;
+      font-size: 12px;
+    }
+
+    .desc {
+      font-size: 10px;
+      width: 80%;
+    }
+
+    .price {
+      margin: 10px 0 0;
+      font-size: 14px;
+      font-weight: 700;
+
+      span {
+        color: #f15a28;
+      }
+    }
+
+    .addToCart {
+      margin-top: 30px;
+    }
+
+    .snackImage {
+      border-radius: 10px 10px 0 0;
+      transition: .3s;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 550px) { //mobile Only
+  .productShowcase {
+    .cards {
+      grid-template-rows: repeat(3, 1fr);
+    }
+  }
+
+  .snacks {
+    width: 100%;
+  }
+}
+
+@media (min-width: 551px) { //Desktop Only
+  .productShowcase {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .snacks {
+    width: 25vw;
+  }
+}

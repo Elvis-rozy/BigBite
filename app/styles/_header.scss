@@ -1,0 +1,67 @@
+header {
+  display: flex;
+  position: fixed;
+  width: 90vw;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+
+  nav {
+    .desktop {
+      font-size: 13px;
+
+      li {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+
+        a {
+          font-weight: 700;
+          transition: .3s;
+          color: gray;
+
+          &:hover {
+            color: var(--accentColor);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 550px) { //mobile Only
+  header {
+    width: 100vw;
+    height: 10vh;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: flex;
+  }
+
+  .menu {
+    display: flex;
+  }
+}
+@media (min-width: 551px) { //Desktop Only
+  header {
+    width: 90vw;
+    height: 15vh;
+  }
+
+  .desktop {
+    display: flex;
+  }
+  
+  .mobile {
+    display: none;
+  }
+  
+  .menu {
+    display: none;
+  }
+}

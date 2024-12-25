@@ -1,0 +1,48 @@
+.features {
+  background: var(--background);
+  color: var(--accentColor);
+  position: relative;
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .cardPg {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 550px) { //mobile Only
+  .featureIcon {
+    width: 50px;
+  }
+
+  .card {
+    width: 26vw;
+    padding: 0;
+  }
+}
+
+@media (min-width: 551px) { //Desktop Only
+  #features {
+    padding-top: 12dvh;
+  }
+
+  .featureIcon {
+    width: 100px;
+  }
+
+  .card {
+    width: 20vw;
+    padding: 40px;
+  }
+}
